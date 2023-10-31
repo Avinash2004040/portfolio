@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avinash Kumarr</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Custom CSS for the stylish design */
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        .page-bg {
+            background: skyblue; /* Brown background color for the page */
+            display: flex;
+        }
+        .left-section {
+            background: #30302f; /* Purple background color for the left section */
+            flex: 1;
+        }
+        .right-section {
+            background: #F87171; /* Red background color for the right section */
+            flex: 2;
+            padding: 20px;
+        }
+        .navbar-bg {
+            background: #baaac8; /* Purple background color for the navbar */
+        }
+        .navbar-text {
+            color: #6277a1; /* Light gray text color for the navbar */
+        }
+        .section-link {
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .section-link:hover {
+            background-color: #F87171;
+            color: #1F2937;
+        }
+        .contact-info {
+            background: hsl(166, 43%, 48%);
+            padding: 20px;
+            color: #F3F4F6;
+        }
+        .contact-links {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+    <script>
+        function navigateToSection(sectionId) {
+            const sections = document.getElementsByClassName('portfolio-section');
+            for (const section of sections) {
+                section.style.display = 'none';
+            }
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</head>
+<body class="font-sans">
+    <!-- Page Background -->
+    <div class="page-bg">
+        <!-- Left Section (Photo and Short Description) -->
+        <div class="left-section text-white p-4">
+            <div class="text-center">
+                <img src="photo.jpeg" alt="Avinash Kumar" class="w-40 h-40 rounded-full border-4 border-white mx-auto mb-4">
+                <h1 class="text-3xl font-bold">Avinash Kumar</h1>
+                <p class="text-lg"></p>
+                <p class="mt-4">
+                    Passionate about software engineering and technology. Eager to learn and innovate.
+                </p>
+            </div>
+        </div>
+        <!-- Right Section (Content) -->
+        <div class="right-section">
+            <!-- Navigation Bar -->
+            <nav class="navbar-bg p-4">
+                <div class="container mx-auto flex justify-between items-center">
+                    <h1 class="text-3xl text-white font-bold">Avinash Kumar</h1>
+                    <ul class="flex space-x-4">
+                        <li><a href="#" class="navbar-text section-link" onclick="navigateToSection('home')">Home</a></li>
+                        <li><a href="#" class="navbar-text section-link" onclick="navigateToSection('about')">About</a></li>
+                        <li><a href="#" class="navbar-text section-link" onclick="navigateToSection('education')">Education</a></li>
+                        <li><a href="#" class="navbar-text section-link" onclick="navigateToSection('experience')">Experience</a></li>
+                        <li><a href="#" class="navbar-text section-link" onclick="navigateToSection('projects')">Projects</a></li>
+                        <li><a href="#" class="navbar-text section-link" onclick="navigateToSection('skills')">Skills</a></li>
+                        <li><a href="#" class="navbar-text section-link" onclick="navigateToSection('achievements')">Achievements</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Home Section -->
+            <header id="home" class="portfolio-section text-white py-20">
+                <h2 class="text-4xl font-bold text-center">Welcome to My Portfolio</h2>
+                <p class="text-lg mt-4 text-center">
+                    I'm a passionate software engineer with a strong desire to create and innovate.
+                </p>
+            </header>
+            <!-- About Section -->
+            <section id="about" class="portfolio-section section-text" style="display: none;">
+                <div class="container mx-auto">
+                    <h2 class="text-3xl font-bold">About Me</h2>
+                    <p class="mt-4">
+                        I'm a software engineer with a passion for coding and problem-solving. I enjoy building applications that make a difference in people's lives. My goal is to continue learning and growing as a developer.
+                    </p>
+                </div>
+            </section>
+            <!-- Education Section -->
+            <section id="education" class="portfolio-section section-text" style="display: none;">
+                <div class="container mx-auto">
+                    <h2 class="text-3xl font-bold">Education</h2>
+                    <ul class="list-disc list-inside mt-4">
+                        <li>
+                            <strong>National Institute of Technology, Patna</strong>
+                            <p>Bachelor of Technology in Electronics and Communication Engineering</p>
+                            <p>June 2024, CGPA: 7.87</p>
+                        </li>
+                        <li>
+                            <strong>Anugrah Narayan College</strong>
+                            <p>Bihar School Examination Board, BIHAR</p>
+                            <p>Percentage: 67.8</p>
+                        </li>
+                        <li>
+                            <strong>D.A.V Public School</strong>
+                            <p>Central Board Of Secondary Education, BIHAR</p>
+                            <p>Percentage: 70.8</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Experience Section -->
+            <section id="experience" class="portfolio-section section-text" style="display: none;">
+                <div class="container mx-auto">
+                    <h2 class="text-3xl font-bold">Experience</h2>
+                    <ul class="list-disc list-inside mt-4">
+                        <li>
+                            <strong>NITP Robotics Club</strong>
+                            <p>Event Head, Patna</p>
+                            <ul class="list-disc list-inside">
+                                <li>Coordinate with other club members and teams to ensure smooth execution of events.</li>
+                                <li>Take charge of logistical aspects arranging for necessary equipment and materials, coordinating with vendors and managing event budgets.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Technical and Cultural Fest of NITP</strong>
+                            <p>Public Relation, Patna</p>
+                            <ul class="list-disc list-inside">
+                                <li>Got several sponsors for the event from various places.</li>
+                                <li>Organized and oversaw PR activities and ensured effective communication with stakeholders, media, and the public.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Projects Section -->
+            <section id="projects" class="portfolio-section section-text" style="display: none;">
+                <div class="container mx-auto">
+                    <h2 class="text-3xl font-bold">Personal Projects</h2>
+                    <ul class="list-disc list-inside mt-4">
+                        <li>
+                            <strong>Admin Dashboard</strong>
+                            <p>An admin dashboard using ReactJS and Ant Design UI Components</p>
+                            <ul class="list-disc list-inside">
+                                <li>Tools & technologies used: React.js, Ant-Design UI, API</li>
+                                <li>It includes all crucial information and enables administrators to conduct efficient management, control the performance, and implement the required changes.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Today's News</strong>
+                            <p>Created React app which can show the latest news</p>
+                            <ul class="list-disc list-inside">
+                                <li>Tools & technologies used: React JS, News API</li>
+                                <li>News from the past few days can be accessed and filtered by category or interest.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Skills Section -->
+            <section id="skills" class="portfolio-section section-text" style="display: none;">
+                <div class="container mx-auto">
+                    <h2 class="text-3xl font-bold">Technical Skills and Interests</h2>
+                    <ul class="list-disc list-inside mt-4">
+                        <li>
+                            <strong>Languages</strong>
+                            <p>C/CPP</p>
+                        </li>
+                        <li>
+                            <strong>Developer Tools</strong>
+                            <p>VS Code, Jupyter Notebook</p>
+                        </li>
+                        <li>
+                            <strong>Frameworks</strong>
+                            <p>Tailwind, React</p>
+                        </li>
+                        <li>
+                            <strong>Cloud/Databases</strong>
+                            <p>SQL</p>
+                        </li>
+                        <li>
+                            <strong>Soft Skills</strong>
+                            <p>Communication, Team Work, Leadership</p>
+                        </li>
+                        <li>
+                            <strong>Coursework</strong>
+                            <p>Matlab, Vivado, Cst Studio, Tinkercad</p>
+                        </li>
+                        <li>
+                            <strong>Areas of Interest</strong>
+                            <p>Web development, machine learning</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Achievements Section -->
+            <section id="achievements" class="portfolio-section section-text" style="display: none;">
+                <div class="container mx-auto">
+                    <h2 class="text-3xl font-bold">Achievements</h2>
+                    <ul class="list-disc list-inside mt-4">
+                        <li><i class="fas fa-award"></i> Silver Medalist In Volleyball Tournament Intramural 2023, NIT Patna (April 2023)</li>
+                        <li><i class="fas fa-award"></i> Elite batch In Modern C++ by NPTEL (April 2022)</li>
+                        <li><i class="fas fa-award"></i> Silver batch in Joy Of Computing Python (April 2023)</li>
+                        <li><i class="fas fa-award"></i> Solved 500+ Questions at LeetCode (<a href="https://leetcode.com/williamavinash385" class="text-blue-500" target="_blank">williamavinash385</a>)</li>
+                        <li><i class="fas fa-award"></i> Solved 500+ Questions at GFG (<a href="https://www.geeksforgeeks.org/user/williamavinash385" class="text-blue-500" target="_blank">williamavinash385</a>)</li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Footer Section -->
+            <footer class="contact-info">
+                <div class="container mx-auto">
+                    <div class="contact-links">
+                        <div>
+                            <i class="fab fa-github fa-2x"></i>
+                            <a href="https://github.com/Avinash2004040/" class="ml-2" target="_blank">GitHub</a>
+                        </div>
+                        <div>
+                            <i class="fab fa-linkedin fa-2x"></i>
+                            <a href="https://www.linkedin.com/in/avinash-kumar-321590201" class="ml-2" target="_blank">LinkedIn</a>
+                        </div>
+                        <div>
+                            <i class="fas fa-phone fa-2x"></i>
+                            <span class="ml-2">+91-6202057571</span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
